@@ -94,6 +94,10 @@
 		D30C8E282D0C893E004F5A15 /* RentaCar */ = {
 			isa = PBXGroup;
 			children = (
+				D30C8E532D0C8969004F5A15 /* App */,
+				D30C8E542D0C8992004F5A15 /* Main */,
+				D30C8E562D0C89A2004F5A15 /* Service */,
+				D30C8E552D0C8999004F5A15 /* Models */,
 				D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */,
 				D30C8E2B2D0C893E004F5A15 /* ContentView.swift */,
 				D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */,
@@ -125,6 +129,50 @@
 				D30C8E462D0C8941004F5A15 /* RentaCarUITestsLaunchTests.swift */,
 			);
 			path = RentaCarUITests;
+			sourceTree = "<group>";
+		};
+		D30C8E532D0C8969004F5A15 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D30C8E542D0C8992004F5A15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D30C8E582D0C89CD004F5A15 /* New Group1 */,
+				D30C8E572D0C89C9004F5A15 /* Components */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D30C8E552D0C8999004F5A15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D30C8E562D0C89A2004F5A15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D30C8E572D0C89C9004F5A15 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D30C8E582D0C89CD004F5A15 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
