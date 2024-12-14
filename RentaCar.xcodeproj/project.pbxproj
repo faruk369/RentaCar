@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D302ADE12D0C92D10014CDDF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE02D0C92D10014CDDF /* MainTabView.swift */; };
+		D302ADE42D0CCA080014CDDF /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE32D0CCA080014CDDF /* ExploreView.swift */; };
+		D302ADE82D0CF30B0014CDDF /* NavigationStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */; };
+		D302ADEB2D0D00DD0014CDDF /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */; };
 		D30C8E2A2D0C893E004F5A15 /* RentaCarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */; };
-		D30C8E2C2D0C893E004F5A15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C8E2B2D0C893E004F5A15 /* ContentView.swift */; };
 		D30C8E2E2D0C8941004F5A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */; };
 		D30C8E312D0C8941004F5A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30C8E302D0C8941004F5A15 /* Preview Assets.xcassets */; };
 		D30C8E3B2D0C8941004F5A15 /* RentaCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C8E3A2D0C8941004F5A15 /* RentaCarTests.swift */; };
@@ -34,9 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D302ADE02D0C92D10014CDDF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D302ADE22D0C9EA30014CDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D302ADE32D0CCA080014CDDF /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackModifier.swift; sourceTree = "<group>"; };
+		D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		D30C8E262D0C893E004F5A15 /* RentaCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentaCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentaCarApp.swift; sourceTree = "<group>"; };
-		D30C8E2B2D0C893E004F5A15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30C8E302D0C8941004F5A15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D30C8E362D0C8941004F5A15 /* RentaCarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RentaCarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +78,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteScreen;
+			sourceTree = "<group>";
+		};
+		D302ADDA2D0C8D8A0014CDDF /* InboxScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InboxScreen;
+			sourceTree = "<group>";
+		};
+		D302ADDB2D0C8D990014CDDF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADE02D0C92D10014CDDF /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D302ADDC2D0C8DA60014CDDF /* TripsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TripsScreen;
+			sourceTree = "<group>";
+		};
+		D302ADDD2D0C8DC20014CDDF /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		D302ADE52D0CF2690014CDDF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADE62D0CF2CF0014CDDF /* ViewModifiers */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D302ADE62D0CF2CF0014CDDF /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		D302ADE92D0D00B70014CDDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADE32D0CCA080014CDDF /* ExploreView.swift */,
+				D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D30C8E1D2D0C893E004F5A15 = {
 			isa = PBXGroup;
 			children = (
@@ -94,12 +162,11 @@
 		D30C8E282D0C893E004F5A15 /* RentaCar */ = {
 			isa = PBXGroup;
 			children = (
+				D302ADE22D0C9EA30014CDDF /* Info.plist */,
 				D30C8E532D0C8969004F5A15 /* App */,
 				D30C8E542D0C8992004F5A15 /* Main */,
 				D30C8E562D0C89A2004F5A15 /* Service */,
 				D30C8E552D0C8999004F5A15 /* Models */,
-				D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */,
-				D30C8E2B2D0C893E004F5A15 /* ContentView.swift */,
 				D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */,
 				D30C8E2F2D0C8941004F5A15 /* Preview Content */,
 			);
@@ -134,6 +201,7 @@
 		D30C8E532D0C8969004F5A15 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -141,8 +209,13 @@
 		D30C8E542D0C8992004F5A15 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D30C8E582D0C89CD004F5A15 /* New Group1 */,
-				D30C8E572D0C89C9004F5A15 /* Components */,
+				D302ADE52D0CF2690014CDDF /* Components */,
+				D302ADDD2D0C8DC20014CDDF /* More */,
+				D302ADDC2D0C8DA60014CDDF /* TripsScreen */,
+				D302ADDB2D0C8D990014CDDF /* TabBar */,
+				D302ADDA2D0C8D8A0014CDDF /* InboxScreen */,
+				D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */,
+				D30C8E582D0C89CD004F5A15 /* ExploreScreen */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -161,18 +234,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		D30C8E572D0C89C9004F5A15 /* Components */ = {
+		D30C8E582D0C89CD004F5A15 /* ExploreScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D302ADE92D0D00B70014CDDF /* Views */,
 			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		D30C8E582D0C89CD004F5A15 /* New Group1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group1";
+			path = ExploreScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +372,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30C8E2C2D0C893E004F5A15 /* ContentView.swift in Sources */,
 				D30C8E2A2D0C893E004F5A15 /* RentaCarApp.swift in Sources */,
+				D302ADE82D0CF30B0014CDDF /* NavigationStackModifier.swift in Sources */,
+				D302ADEB2D0D00DD0014CDDF /* CustomSearchBar.swift in Sources */,
+				D302ADE42D0CCA080014CDDF /* ExploreView.swift in Sources */,
+				D302ADE12D0C92D10014CDDF /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,9 +543,9 @@
 				DEVELOPMENT_TEAM = 2ZCJ9C6AX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RentaCar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -502,9 +572,9 @@
 				DEVELOPMENT_TEAM = 2ZCJ9C6AX2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RentaCar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
