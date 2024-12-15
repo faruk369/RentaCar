@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @StateObject private var viewModel  = ExploreViewModel()
     
     var body: some View {
         TabView{
-            ExploreView()
+            ExploreView(viewmodel: viewModel)
                 .tabItem{
                     VStack{
                         Image(systemName: "magnifyingglass")

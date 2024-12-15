@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @StateObject var viewmodel: ExploreViewModel
+    init(viewmodel: ExploreViewModel) {
+        self._viewmodel = StateObject(wrappedValue: viewmodel)
+    }
+    
     var body: some View {
         NavigationStack{
             ScrollView{
                 ZStack{
                     GradientColorBackground()
-                    Spacer().frame(height:150)
-                    CustomSearchBar()
+                    VStack{
+                        Spacer().frame(height: 10)
+                        CustomSearchBar()
+                        Spacer().frame(height: 60)
+                        PopularBrandsView(viewModel: viewmodel)
+                    }
                 }
             }
             
@@ -35,7 +44,7 @@ struct GradientColorBackground: View {
 }
 
 #Preview {
-    ExploreView()
+    ExploreView(viewmodel: ExploreViewModel())
 }
 
 
