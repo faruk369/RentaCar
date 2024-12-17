@@ -11,7 +11,7 @@ struct CustomSearchBar: View {
     var body: some View {
         Button(action:{}, label: {
             HStack{
-                Image(systemName: "Magnifyingglass")
+                Image(systemName: "magnifyingglass")
                     .padding(.leading)
                     .foregroundStyle(.black)
                 Text("Search a Car")
@@ -29,6 +29,7 @@ struct CustomSearchBar: View {
             .padding(.horizontal)
         })
     }
+    
 }
 
 #Preview {

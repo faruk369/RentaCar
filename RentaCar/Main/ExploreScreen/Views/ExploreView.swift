@@ -9,39 +9,94 @@ import SwiftUI
 
 struct ExploreView: View {
     @StateObject var viewmodel: ExploreViewModel
+    
     init(viewmodel: ExploreViewModel) {
         self._viewmodel = StateObject(wrappedValue: viewmodel)
+        
     }
     
+    
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                ZStack{
-                    GradientColorBackground()
-                    VStack{
-                        Spacer().frame(height: 10)
+        NavigationStack {
+            ZStack {
+                // Gradient background that covers the entire screen
+                GradientColorBackground()
+
+                // ScrollView with content
+                ScrollView {
+                    VStack {
+                        // Content views
+                        Spacer().frame(height: 40)
                         CustomSearchBar()
-                        Spacer().frame(height: 60)
+                        Spacer().frame(height: 70)
                         PopularBrandsView(viewModel: viewmodel)
+                        
+                        // Available Cars section
+                        VStack {
+                            HStack {
+                                Text("Available Cars")
+                                    .font(.headline)
+                                    .fontWeight(.semibold)
+                                Spacer()
+                            }
+                            .foregroundStyle(.white)
+                        }
+                        .padding()
+
+                        // ForEach loop to display cars
+                        ForEach(viewmodel.cars) { car in
+                            DefaultCarView(viewmodel: viewmodel, car: car)
+                        }
                     }
                 }
             }
+            .navigationBarTitle("Rentacar", displayMode: .inline)
             
-                .navigationStackModifier()
+            // .navigationBarBackgroundHidden(true)  // Hide the default navigation bar background
+            .navigationBarItems(
+                leading: Circle()
+                    .fill(.black.opacity(0.1))
+                    .frame(width: 45, height: 45)
+                    .overlay(
+                            Circle() // Add the black circle frame around the bell
+                            .stroke(Color.black, lineWidth: 0.5) // Thin black border
+                                        )
+                    .overlay {
+                        Image(systemName: "bell.fill")
+                            .foregroundStyle(.black)
+                    },
+                trailing: Image("dwight")
+                    .resizable()
+                    .frame(width: 45, height: 45)
+                    .scaledToFill()
+                    .clipShape(Circle())
+                    .overlay(
+                            Circle() // Add the black circle frame around the image
+                            .stroke(Color.black, lineWidth: 0.5) // Thin black border
+                                        )
+            )
         }
     }
 }
+
 
 
 struct GradientColorBackground: View {
-    var body: some View{
-        VStack{
-            LinearGradient(colors: [.white, .gray], startPoint: .top, endPoint: .bottom)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
-            Spacer()
+    var body: some View {
+        VStack {
+            // Gradient from solid gray to white
+            LinearGradient(
+                gradient: Gradient(colors: [Color.gray, Color.white]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+            .frame(width: UIScreen.main.bounds.width)
         }
     }
 }
+
+
 
 #Preview {
     ExploreView(viewmodel: ExploreViewModel())
