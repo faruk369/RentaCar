@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		D302ADE12D0C92D10014CDDF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE02D0C92D10014CDDF /* MainTabView.swift */; };
 		D302ADE42D0CCA080014CDDF /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE32D0CCA080014CDDF /* ExploreView.swift */; };
-		D302ADE82D0CF30B0014CDDF /* NavigationStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */; };
 		D302ADEB2D0D00DD0014CDDF /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */; };
 		D302ADED2D0DDDA50014CDDF /* Brands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADEC2D0DDDA50014CDDF /* Brands.swift */; };
 		D302ADF02D0DE9540014CDDF /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADEF2D0DE9540014CDDF /* ExploreViewModel.swift */; };
 		D302ADF22D0E49F60014CDDF /* PopularBrandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADF12D0E49F60014CDDF /* PopularBrandsView.swift */; };
 		D302ADF42D1091420014CDDF /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADF32D1091420014CDDF /* Car.swift */; };
 		D302ADF72D10A2F90014CDDF /* DefaultCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADF62D10A2F90014CDDF /* DefaultCarView.swift */; };
+		D302ADFA2D1211A00014CDDF /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADF92D1211A00014CDDF /* FavoritesViewModel.swift */; };
+		D302ADFF2D1217470014CDDF /* FavoritedCarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D302ADFE2D1217470014CDDF /* FavoritedCarsView.swift */; };
 		D30C8E2A2D0C893E004F5A15 /* RentaCarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */; };
 		D30C8E2E2D0C8941004F5A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */; };
 		D30C8E312D0C8941004F5A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30C8E302D0C8941004F5A15 /* Preview Assets.xcassets */; };
@@ -45,13 +46,14 @@
 		D302ADE02D0C92D10014CDDF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		D302ADE22D0C9EA30014CDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D302ADE32D0CCA080014CDDF /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
-		D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackModifier.swift; sourceTree = "<group>"; };
 		D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		D302ADEC2D0DDDA50014CDDF /* Brands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brands.swift; sourceTree = "<group>"; };
 		D302ADEF2D0DE9540014CDDF /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		D302ADF12D0E49F60014CDDF /* PopularBrandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularBrandsView.swift; sourceTree = "<group>"; };
 		D302ADF32D1091420014CDDF /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		D302ADF62D10A2F90014CDDF /* DefaultCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCarView.swift; sourceTree = "<group>"; };
+		D302ADF92D1211A00014CDDF /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		D302ADFE2D1217470014CDDF /* FavoritedCarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedCarsView.swift; sourceTree = "<group>"; };
 		D30C8E262D0C893E004F5A15 /* RentaCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentaCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30C8E292D0C893E004F5A15 /* RentaCarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentaCarApp.swift; sourceTree = "<group>"; };
 		D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D302ADFB2D1216FE0014CDDF /* View */,
+				D302ADF82D12116F0014CDDF /* ViewModel */,
 			);
 			path = FavoriteScreen;
 			sourceTree = "<group>";
@@ -136,7 +140,6 @@
 		D302ADE62D0CF2CF0014CDDF /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				D302ADE72D0CF30B0014CDDF /* NavigationStackModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -165,6 +168,22 @@
 				D302ADF62D10A2F90014CDDF /* DefaultCarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D302ADF82D12116F0014CDDF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADF92D1211A00014CDDF /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D302ADFB2D1216FE0014CDDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADFE2D1217470014CDDF /* FavoritedCarsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D30C8E1D2D0C893E004F5A15 = {
@@ -403,11 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D302ADFF2D1217470014CDDF /* FavoritedCarsView.swift in Sources */,
+				D302ADFA2D1211A00014CDDF /* FavoritesViewModel.swift in Sources */,
 				D30C8E2A2D0C893E004F5A15 /* RentaCarApp.swift in Sources */,
 				D302ADF72D10A2F90014CDDF /* DefaultCarView.swift in Sources */,
 				D302ADED2D0DDDA50014CDDF /* Brands.swift in Sources */,
 				D302ADF22D0E49F60014CDDF /* PopularBrandsView.swift in Sources */,
-				D302ADE82D0CF30B0014CDDF /* NavigationStackModifier.swift in Sources */,
 				D302ADEB2D0D00DD0014CDDF /* CustomSearchBar.swift in Sources */,
 				D302ADF42D1091420014CDDF /* Car.swift in Sources */,
 				D302ADE42D0CCA080014CDDF /* ExploreView.swift in Sources */,

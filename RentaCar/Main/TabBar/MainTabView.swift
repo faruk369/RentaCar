@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView{
-            ExploreView(viewmodel: viewModel)
+            ExploreView()
                 .tabItem{
                     VStack{
                         Image(systemName: "magnifyingglass")
@@ -22,11 +22,12 @@ struct MainTabView: View {
                 }
                 .tag(0)
             
-            Text("Favorite")
+            
+            FavoritedCarsView()
                 .tabItem{
                     VStack{
                         Image(systemName: "heart.fill")
-                        Text("Search")
+                        Text("Favorites")
                     }
                 }
                 .tag(1)
@@ -63,6 +64,7 @@ struct MainTabView: View {
         .onAppear(){
             UITabBar.appearance().backgroundColor = .white
         }
+        .environmentObject(viewModel)
     }
 }
 

@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct ExploreView: View {
-    @StateObject var viewmodel: ExploreViewModel
-    
-    init(viewmodel: ExploreViewModel) {
-        self._viewmodel = StateObject(wrappedValue: viewmodel)
-        
-    }
-    
+    @EnvironmentObject var viewmodel: ExploreViewModel
     
     var body: some View {
         NavigationStack {
@@ -99,7 +93,8 @@ struct GradientColorBackground: View {
 
 
 #Preview {
-    ExploreView(viewmodel: ExploreViewModel())
+    ExploreView()
+        .environmentObject(ExploreViewModel())
 }
 
 
