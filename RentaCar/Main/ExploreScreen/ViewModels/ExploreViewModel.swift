@@ -17,7 +17,11 @@ class ExploreViewModel: ObservableObject {
     
     @Published var cars: [Car] = [
         Car(id: UUID().uuidString, carName: "BMW X1", rating: 4.4, brand: "BMW", pricePerDay: 60, description: "Modern BMW for the classy ones", displayImageName: "bmwx1", imageNames: ["bmwx1_1", "bmwx1_2", "bmwx1_3"], insurance: "Basic Insurance", numberOfSeats: 6, numberofDoors: 4, GasType: "Premium", hostName: "Nina Rental", isFavorite: false, hostImageName: "dwight", hostJoinDate: "06 March 2018"),
-        Car(id: UUID().uuidString, carName: "Mercedes Benz", rating: 4.9, brand: "Mercedes", pricePerDay: 90, description: "World class, fast & fuel efficient car", displayImageName: "merecedesC", imageNames: ["mercedes_c_0", "mercedes_c_1", "mercedes_c_2", "mercedes_c_3", "mercedes_c_4"], insurance: "Basic Insurance", numberOfSeats: 5, numberofDoors: 4, GasType: "Premium", hostName: "Anna", isFavorite: false, hostImageName: "michael_scott", hostJoinDate: "19 August 2021")
+        Car(id: UUID().uuidString, carName: "Mercedes Benz", rating: 4.9, brand: "Mercedes", pricePerDay: 90, description: "World class, fast & fuel efficient car", displayImageName: "merecedesC", imageNames: ["mercedes_c_0", "mercedes_c_1", "mercedes_c_2", "mercedes_c_3", "mercedes_c_4"], insurance: "Basic Insurance", numberOfSeats: 5, numberofDoors: 4, GasType: "Premium", hostName: "Anna", isFavorite: false, hostImageName: "michael_scott", hostJoinDate: "19 August 2021"),
+        
+        Car(id: UUID().uuidString, carName: "Jaguar", rating: 4.8, brand: "Jaguar", pricePerDay: 50, description: "Basic  durable Jaguar", displayImageName: "jaguarC0", imageNames: [], insurance: "Basic", numberOfSeats: 4, numberofDoors: 4, GasType: "Premium", hostName: "Anna", isFavorite: false, hostImageName: "dwight", hostJoinDate: "01/01/2023"),
+        
+        Car(id: UUID().uuidString, carName: "Audi Base", rating: 5.0, brand: "Audi", pricePerDay: 60, description: "Best Audi-Fuel Efficient", displayImageName: "AudiC0", imageNames: [], insurance: "Basic", numberOfSeats: 5, numberofDoors: 4, GasType: "Premieum", hostName: "Anna", isFavorite: false, hostImageName: "dwight", hostJoinDate: "15/03/2019")
         
     ]
     
