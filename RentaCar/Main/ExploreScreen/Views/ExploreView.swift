@@ -13,7 +13,7 @@ struct ExploreView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Gradient background that covers the entire screen
+                // Gradient background
                 GradientColorBackground()
 
                 // ScrollView with content
@@ -21,40 +21,23 @@ struct ExploreView: View {
                     VStack {
                         // Content views
                         Spacer().frame(height: 40)
-                        CustomSearchBar()
+                        CustomSearchBar() // Search bar component
                         Spacer().frame(height: 70)
-                        PopularBrandsView(viewModel: viewmodel)
+                        PopularBrandsView(viewModel: viewmodel) // Brands section
                         
                         // Available Cars section
-                        VStack {
-                            HStack {
-                                Text("Available Cars")
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                Spacer()
-                            }
-                            .foregroundStyle(.white)
-                        }
-                        .padding()
-
-                        // ForEach loop to display cars
-                        ForEach(viewmodel.cars) { car in
-                            DefaultCarView(viewmodel: viewmodel, car: car)
-                        }
+                        AvailableCarsListView() // Display available cars
                     }
                 }
             }
             .navigationBarTitle("Rentacar", displayMode: .inline)
-            
-            // .navigationBarBackgroundHidden(true)  // Hide the default navigation bar background
             .navigationBarItems(
                 leading: Circle()
                     .fill(.black.opacity(0.1))
                     .frame(width: 45, height: 45)
                     .overlay(
-                            Circle() // Add the black circle frame around the bell
-                            .stroke(Color.black, lineWidth: 0.5) // Thin black border
-                                        )
+                        Circle().stroke(Color.black, lineWidth: 0.5)
+                    )
                     .overlay {
                         Image(systemName: "bell.fill")
                             .foregroundStyle(.black)
@@ -65,28 +48,23 @@ struct ExploreView: View {
                     .scaledToFill()
                     .clipShape(Circle())
                     .overlay(
-                            Circle() // Add the black circle frame around the image
-                            .stroke(Color.black, lineWidth: 0.5) // Thin black border
-                                        )
+                        Circle().stroke(Color.black, lineWidth: 0.5)
+                    )
             )
         }
     }
 }
 
-
-
+// Define GradientColorBackground as a separate reusable component
 struct GradientColorBackground: View {
     var body: some View {
-        VStack {
-            // Gradient from solid gray to white
-            LinearGradient(
-                gradient: Gradient(colors: [Color.gray, Color.white]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
-            .frame(width: UIScreen.main.bounds.width)
-        }
+        LinearGradient(
+            gradient: Gradient(colors: [Color.gray, Color.white]),
+            startPoint: .top,
+            endPoint: .bottom
+        )
+        .ignoresSafeArea() // Makes the gradient fill the whole screen
+        .frame(width: UIScreen.main.bounds.width) // Fills the width of the screen
     }
 }
 
@@ -96,5 +74,3 @@ struct GradientColorBackground: View {
     ExploreView()
         .environmentObject(ExploreViewModel())
 }
-
-

@@ -50,7 +50,7 @@ struct PopularBrandsView: View {
                     .padding(.horizontal)
                 }
             }
-            .padding(.horizontal)
+            .padding(.leading)
        
     }
 }
