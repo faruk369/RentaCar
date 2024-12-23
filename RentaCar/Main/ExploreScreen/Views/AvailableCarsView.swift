@@ -9,51 +9,51 @@ import SwiftUI
 
 struct AvailableCarsView: View {
     let car: Car // Pass the selected car to this view
+    let imageFrameTabView:CGFloat = UIScreen.main.bounds.height / 3 // Creating frame for the pictures
     
     var body: some View {
-        
-        VStack {
-                    // The TabView for swipeable images
-                    TabView {
-                        ForEach(car.imageNames, id: \.self) { imageName in
-                            Image(imageName) // Assuming images are in your assets
-                                .resizable() // Make the image resizable
-                                .scaledToFill() // Ensure it fills the available space
-                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.50) // 35% of screen height
-                                .cornerRadius(10) // No rounded corners to make it fit perfectly
-            
-                        }
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0.5) { //left-aligned the select trip section
+                // The TabView for swipeable images (50% of screen height)
+                TabView {
+                    ForEach(car.imageNames, id: \.self) { imageName in
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFill()
                     }
-                    .tabViewStyle(.page) // Page style tab view for swiping
+                }
+                .tabViewStyle(.page)
+                .frame(height: imageFrameTabView)
+                .ignoresSafeArea()
+                
+                // Divider separating the image carousel from the next section
+                Divider()
+                
+                // Trip Selection Section (directly below the image carousel)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Select Trip Duration:")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color(.darkGray))
                     
+                    HStack {
+                        Image(systemName: "timer")
+                            .resizable()
+                            .frame(width: 24, height: 24)
                     }
-                    .navigationBarTitle(car.carName, displayMode: .inline) // Title at the top
-                    
-                    // car details
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(car.carName)
-                            .font(.title)
-                            .fontWeight(.bold)
-                        
-                        Text("Rating: \(String(format: "%.1f", car.rating)) ⭐️")
-                            .font(.subheadline)
-                        
-                        Text("Price per day: $\(car.pricePerDay)")
-                            .font(.subheadline)
-                        
-                        Text("Description: \(car.description)")
-                            .font(.body)
-                        
-                        Text("Host: \(car.hostName)")
-                                       .font(.subheadline)
-                                       .foregroundColor(.gray)
-                                   
-                                   Spacer()
-                               }
-                               .padding([.horizontal, .top], 5) // Padding for car details section
-                           }
-    
-                       }
+                    .padding(.leading, 0)
+                }
+                .padding(.horizontal)
+                
+                // Spacer to push content if more sections are added
+                Spacer(minLength: 16) // Flexible space for future additions
+            }
+            .frame(height: UIScreen.main.bounds.height * 0.50) // Constraining the height to 50% of the screen height
+            .navigationBarTitle(car.carName, displayMode: .inline)
+        }
+    }
+}
+
 
 #Preview {
     AvailableCarsView(car: Car(id: UUID().uuidString, carName: "BMW X1", rating: 4.4, brand: "BMW", pricePerDay: 60, description: "Modern BMW for the classy ones", displayImageName: "bmwx1", imageNames: [], insurance: "Basic Insurance", numberOfSeats: 6, numberofDoors: 4, GasType: "Premium", hostName: "Nina Rental", isFavorite: false, hostImageName: "dwight", hostJoinDate: "06 March 2018"))

@@ -41,24 +41,15 @@ struct MainTabView: View {
                 }
                 .tag(2)
             
-            Text("Inbox")
+            
+            Text("Profile")
                 .tabItem{
                     VStack{
-                        Image(systemName: "bubble.fill")
-                        Text("Inbox")
+                        Image(systemName: "person.crop.circle.fill")
+                        Text("Profile")
                     }
                 }
                 .tag(3)
-            
-            
-            Text("More")
-                .tabItem{
-                    VStack{
-                        Image(systemName: "ellipsis")
-                        Text("More")
-                    }
-                }
-                .tag(4)
         }
         .accentColor(.black)
         .onAppear(){
