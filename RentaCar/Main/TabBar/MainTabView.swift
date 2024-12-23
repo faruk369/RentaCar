@@ -32,11 +32,11 @@ struct MainTabView: View {
                 }
                 .tag(1)
             
-            Text("Trips")
+            Text("Cart")
                 .tabItem{
                     VStack{
-                        Image(systemName: "road.lanes.curved.left")
-                        Text("Trips")
+                        Image(systemName: "cart.badge.plus")
+                        Text("Cart")
                     }
                 }
                 .tag(2)

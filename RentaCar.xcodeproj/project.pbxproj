@@ -105,13 +105,6 @@
 			path = FavoriteScreen;
 			sourceTree = "<group>";
 		};
-		D302ADDA2D0C8D8A0014CDDF /* InboxScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = InboxScreen;
-			sourceTree = "<group>";
-		};
 		D302ADDB2D0C8D990014CDDF /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +262,6 @@
 				D302ADDD2D0C8DC20014CDDF /* More */,
 				D302ADDC2D0C8DA60014CDDF /* TripsScreen */,
 				D302ADDB2D0C8D990014CDDF /* TabBar */,
-				D302ADDA2D0C8D8A0014CDDF /* InboxScreen */,
 				D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */,
 				D30C8E582D0C89CD004F5A15 /* ExploreScreen */,
 			);

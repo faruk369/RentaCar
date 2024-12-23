@@ -41,15 +41,7 @@ struct ExploreView: View {
                     .overlay {
                         Image(systemName: "bell.fill")
                             .foregroundStyle(.black)
-                    },
-                trailing: Image("dwight")
-                    .resizable()
-                    .frame(width: 45, height: 45)
-                    .scaledToFill()
-                    .clipShape(Circle())
-                    .overlay(
-                        Circle().stroke(Color.black, lineWidth: 0.5)
-                    )
+                    }
             )
         }
     }
