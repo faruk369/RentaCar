@@ -10,10 +10,20 @@ import SwiftUI
 struct AvailableCarsView: View {
     let car: Car // Pass the selected car to this view
     let imageFrameTabView:CGFloat = UIScreen.main.bounds.height / 3 // Creating frame for the pictures
+    @State private var date = Date.now
+    @State private var selectedDuration = 3
+    @State private var isPickerExpanded = false // Boolean to toggle the visibility of hours
+    
+    // Get the current date with no time
+    var currentDate: Date {
+        return Calendar.current.startOfDay(for: Date())
+    }
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 0.5) { //left-aligned the select trip section
+            
+            VStack(alignment: .leading, spacing: 0.5) {
+                
                 // The TabView for swipeable images (50% of screen height)
                 TabView {
                     ForEach(car.imageNames, id: \.self) { imageName in
@@ -36,24 +46,65 @@ struct AvailableCarsView: View {
                         .fontWeight(.semibold)
                         .foregroundStyle(Color(.darkGray))
                     
-                    HStack {
-                        Image(systemName: "timer")
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                    // Wrap the DatePicker and icon in a VStack
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Image(systemName: "calendar")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                            
+                            // DatePicker for selecting a future date (no time part)
+                            DatePicker("Select Date",
+                                       selection: $date,
+                                       in: currentDate..., // Prevent selecting past dates
+                                       displayedComponents: [.date]) // Only show the date (no time)
+                            .datePickerStyle(CompactDatePickerStyle())
+                            .frame(maxHeight: 400)
+                            .padding(.leading, 8)
+                        }
                     }
-                    .padding(.leading, 0)
+                    
+                    // Duration Section
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Image(systemName: "timer")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                            
+                            Text("Duration")
+                                .font(.headline)
+                                .foregroundStyle(Color(.darkGray))
+                                .padding(.leading, 8)
+                            Spacer()
+                            // Wheel Picker for selecting hours (range 3 to 72 hours)
+                            Picker("Select Duration", selection: $selectedDuration) {
+                                ForEach(isPickerExpanded ? 3..<72 : 3..<4, id: \.self) { hour in
+                                    Text("\(hour) hours\(hour > 3 ? "s" : "")")
+                                        .tag(hour)
+                                }
+                            }
+                            .pickerStyle(WheelPickerStyle())
+                            .frame(width: 120)
+                            .onTapGesture {
+                                withAnimation {
+                                    isPickerExpanded.toggle() // Toggle the picker expansion on tap
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top, -80)
                 }
-                .padding(.horizontal)
-                
-                // Spacer to push content if more sections are added
-                Spacer(minLength: 16) // Flexible space for future additions
+                .padding(.leading, 0)
             }
-            .frame(height: UIScreen.main.bounds.height * 0.50) // Constraining the height to 50% of the screen height
-            .navigationBarTitle(car.carName, displayMode: .inline)
+            .padding(.horizontal)
+            
         }
+        .navigationBarTitle(car.carName, displayMode: .inline)
+        
     }
+       
 }
-
+    
 
 #Preview {
     AvailableCarsView(car: Car(id: UUID().uuidString, carName: "BMW X1", rating: 4.4, brand: "BMW", pricePerDay: 60, description: "Modern BMW for the classy ones", displayImageName: "bmwx1", imageNames: [], insurance: "Basic Insurance", numberOfSeats: 6, numberofDoors: 4, GasType: "Premium", hostName: "Nina Rental", isFavorite: false, hostImageName: "dwight", hostJoinDate: "06 March 2018"))
