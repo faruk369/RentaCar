@@ -26,6 +26,6 @@ struct Car: Identifiable, Hashable,Codable {
     var isFavorite: Bool
     var hostImageName: String
     var hostJoinDate: String
+    var isBookingConfirmed: Bool 
     
-
 }

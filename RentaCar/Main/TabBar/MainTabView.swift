@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @StateObject private var viewModel  = ExploreViewModel()
+    @StateObject var cartViewModel = CartViewModel()
     
     var body: some View {
         TabView{
@@ -32,7 +33,7 @@ struct MainTabView: View {
                 }
                 .tag(1)
             
-            Text("Cart")
+            CartView()
                 .tabItem{
                     VStack{
                         Image(systemName: "cart.badge.plus")
@@ -42,7 +43,7 @@ struct MainTabView: View {
                 .tag(2)
             
             
-            Text("Profile")
+            ProfileView()
                 .tabItem{
                     VStack{
                         Image(systemName: "person.crop.circle.fill")
@@ -54,11 +55,15 @@ struct MainTabView: View {
         .accentColor(.black)
         .onAppear(){
             UITabBar.appearance().backgroundColor = .white
+            
         }
         .environmentObject(viewModel)
+        .environmentObject(cartViewModel)
     }
 }
 
 #Preview {
     MainTabView()
+            .environmentObject(ExploreViewModel())
+            .environmentObject(CartViewModel())
 }
