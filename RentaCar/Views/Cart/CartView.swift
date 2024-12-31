@@ -32,8 +32,8 @@ struct CartView: View {
                             .onDelete(perform: deleteBookedCar) // Swipe-to-delete functionality
                     }
                     }
+                    
                 }
-                
             }
             .navigationTitle("Cart")
             .font(.title3)
