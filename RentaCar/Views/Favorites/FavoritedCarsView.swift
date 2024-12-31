@@ -32,13 +32,13 @@ struct FavoritedCarsView: View {
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text("Favorites")
-                            .font(.title3) // Customize font size if needed
+                            .font(.title3)
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .center) // Center the text
                     }
                 }
                 Spacer()
-                    .navigationBarTitleDisplayMode(.inline) // Optional: inline title style
+                    .navigationBarTitleDisplayMode(.inline) // inline title style
             }
         }
     }

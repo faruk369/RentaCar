@@ -22,46 +22,37 @@ struct BookedCarView: View {
                     .clipShape(Circle())
                     .padding(.trailing)
                 
-                // Car Title and Rating
+                // Car Title
                 VStack(alignment: .leading) {
                     Text(bookedCar.name)
                         .font(.headline)
                         .padding(.bottom, 2)
                     
-                    HStack {
-                        Text(String(format: "%.1f", bookedCar.rating))
-                            .font(.subheadline)
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
-                    }
-                    
+                  // Selected Location
                     HStack{
                         Text("\(bookedCar.location)")
-                    }
-                    
-                    HStack {
-                        Text(bookedCar.hostName)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
                     }
                 }
                 
                 Spacer()
                 
                 VStack{
-                HStack{
-                    Text("Total: $\(bookedCar.finalPrice)")
-                        .foregroundStyle(Color(.green))
-                }
-                HStack{
-                    Text("Hours: \(bookedCar.duration)")
+                    HStack{
+                        Text("Total: $\(bookedCar.finalPrice)")
+                            .foregroundStyle(Color(.green))
+                    }
+                    HStack{
+                        Text("Hours: \(bookedCar.duration)")
+                    }
                 }
             }
-                    .padding(.top, 1)
-                    .padding(.horizontal)
-            }
-            
+            .padding()
+            .padding(.top, 1)
+            .padding(.horizontal)
         }
+        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white).shadow(radius: 5))
+        .padding(.horizontal)
+        .padding(.bottom, 10)
     }
 }
 

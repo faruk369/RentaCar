@@ -14,27 +14,30 @@ struct CartView: View {
         NavigationView {
             ZStack {
                 GradientColorBackground()
-                    .edgesIgnoringSafeArea(.all) // Gradient covers the entire screen
-
-                // Show either the list of cars or the "No booked cars" message
-                if cartViewModel.bookedCars.isEmpty {
-                    Text("No booked cars")
-                        .font(.headline)
-                        .foregroundColor(.black)
-                        .padding()
-                } else {
-                    List {
-                        // Iterate over the list of booked cars
-                        ForEach(cartViewModel.bookedCars) { bookedCar in
-                            BookedCarView(CartViewmodel: cartViewModel, bookedCar: bookedCar)
-                                .padding(.bottom, 10) // Add some spacing between list items
-                        }
-                        .onDelete(perform: deleteBookedCar) // Swipe-to-delete functionality
+                    
+                ScrollView {
+                    VStack{
+                    // Show either the list of cars or the "No booked cars" message
+                    if cartViewModel.bookedCars.isEmpty {
+                        Text("No booked cars")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding()
+                    } else {
+                            // Iterate over the list of booked cars
+                            ForEach(cartViewModel.bookedCars) { bookedCar in
+                                BookedCarView(CartViewmodel: cartViewModel, bookedCar: bookedCar)
+                                    .padding(.bottom, 10)
+                            }
+                            .onDelete(perform: deleteBookedCar) // Swipe-to-delete functionality
                     }
-                    .listStyle(PlainListStyle()) //avoid default styling
+                    }
                 }
+                
             }
             .navigationTitle("Cart")
+            .font(.title3)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 
