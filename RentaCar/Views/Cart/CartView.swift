@@ -31,10 +31,10 @@ struct CartView: View {
                         }
                         .onDelete(perform: deleteBookedCar) // Swipe-to-delete functionality
                     }
-                    .listStyle(PlainListStyle()) // Use plain list style to avoid default styling
+                    .listStyle(PlainListStyle()) //avoid default styling
                 }
             }
-            .navigationTitle("Cart") // Title for the navigation bar
+            .navigationTitle("Cart")
         }
     }
 

@@ -104,102 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADFB2D1216FE0014CDDF /* View */,
-				D302ADF82D12116F0014CDDF /* ViewModel */,
-			);
-			path = FavoriteScreen;
-			sourceTree = "<group>";
-		};
-		D302ADDB2D0C8D990014CDDF /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADE02D0C92D10014CDDF /* MainTabView.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		D302ADDC2D0C8DA60014CDDF /* TripsScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TripsScreen;
-			sourceTree = "<group>";
-		};
-		D302ADDD2D0C8DC20014CDDF /* More */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		D302ADE52D0CF2690014CDDF /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADF52D10A2CF0014CDDF /* Views */,
-				D302ADE62D0CF2CF0014CDDF /* ViewModifiers */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		D302ADE62D0CF2CF0014CDDF /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModifiers;
-			sourceTree = "<group>";
-		};
-		D302ADE92D0D00B70014CDDF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADE32D0CCA080014CDDF /* ExploreView.swift */,
-				D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */,
-				D302ADF12D0E49F60014CDDF /* PopularBrandsView.swift */,
-				D302AE002D15F97E0014CDDF /* AvailableCarsView.swift */,
-				D3D058EB2D232C85005843C2 /* CartView.swift */,
-				D302AE022D1605E00014CDDF /* AvailableCarsListView.swift */,
-				D302AE062D19B8970014CDDF /* ProfileView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D302ADEE2D0DE92D0014CDDF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADEF2D0DE9540014CDDF /* ExploreViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D302ADF52D10A2CF0014CDDF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADF62D10A2F90014CDDF /* DefaultCarView.swift */,
-				D3D058F12D234D8E005843C2 /* BookedCarView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D302ADF82D12116F0014CDDF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADF92D1211A00014CDDF /* FavoritesViewModel.swift */,
-				D3D058E72D2324E9005843C2 /* CartViewModel.swift */,
-				D3D058EF2D233BA1005843C2 /* BookedCarModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D302ADFB2D1216FE0014CDDF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADFE2D1217470014CDDF /* FavoritedCarsView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D30C8E1D2D0C893E004F5A15 = {
 			isa = PBXGroup;
 			children = (
@@ -223,11 +127,12 @@
 		D30C8E282D0C893E004F5A15 /* RentaCar */ = {
 			isa = PBXGroup;
 			children = (
-				D302ADE22D0C9EA30014CDDF /* Info.plist */,
 				D30C8E532D0C8969004F5A15 /* App */,
-				D30C8E542D0C8992004F5A15 /* Main */,
-				D30C8E562D0C89A2004F5A15 /* Service */,
 				D30C8E552D0C8999004F5A15 /* Models */,
+				D3D058FA2D2370A2005843C2 /* View Models */,
+				D3D058F42D236F25005843C2 /* Views */,
+				D302ADE22D0C9EA30014CDDF /* Info.plist */,
+				D30C8E562D0C89A2004F5A15 /* Service */,
 				D30C8E2D2D0C8941004F5A15 /* Assets.xcassets */,
 				D30C8E2F2D0C8941004F5A15 /* Preview Content */,
 			);
@@ -267,24 +172,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		D30C8E542D0C8992004F5A15 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				D302ADE52D0CF2690014CDDF /* Components */,
-				D302ADDD2D0C8DC20014CDDF /* More */,
-				D302ADDC2D0C8DA60014CDDF /* TripsScreen */,
-				D302ADDB2D0C8D990014CDDF /* TabBar */,
-				D302ADD92D0C8D7F0014CDDF /* FavoriteScreen */,
-				D30C8E582D0C89CD004F5A15 /* ExploreScreen */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		D30C8E552D0C8999004F5A15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D302ADEC2D0DDDA50014CDDF /* Brands.swift */,
 				D302ADF32D1091420014CDDF /* Car.swift */,
+				D3D058EF2D233BA1005843C2 /* BookedCarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,13 +189,64 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		D30C8E582D0C89CD004F5A15 /* ExploreScreen */ = {
+		D3D058F42D236F25005843C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D302ADEE2D0DE92D0014CDDF /* ViewModels */,
-				D302ADE92D0D00B70014CDDF /* Views */,
+				D302ADE02D0C92D10014CDDF /* MainTabView.swift */,
+				D3D058F82D236F9C005843C2 /* Favorites */,
+				D3D058F72D236F59005843C2 /* Cart */,
+				D3D058F62D236F4E005843C2 /* Explore */,
+				D3D058F52D236F43005843C2 /* Profile */,
 			);
-			path = ExploreScreen;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3D058F52D236F43005843C2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D302AE062D19B8970014CDDF /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D3D058F62D236F4E005843C2 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADE32D0CCA080014CDDF /* ExploreView.swift */,
+				D302ADF12D0E49F60014CDDF /* PopularBrandsView.swift */,
+				D302ADEA2D0D00DD0014CDDF /* CustomSearchBar.swift */,
+				D302AE002D15F97E0014CDDF /* AvailableCarsView.swift */,
+				D302AE022D1605E00014CDDF /* AvailableCarsListView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		D3D058F72D236F59005843C2 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				D3D058EB2D232C85005843C2 /* CartView.swift */,
+				D3D058F12D234D8E005843C2 /* BookedCarView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		D3D058F82D236F9C005843C2 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADFE2D1217470014CDDF /* FavoritedCarsView.swift */,
+				D302ADF62D10A2F90014CDDF /* DefaultCarView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		D3D058FA2D2370A2005843C2 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D302ADEF2D0DE9540014CDDF /* ExploreViewModel.swift */,
+				D302ADF92D1211A00014CDDF /* FavoritesViewModel.swift */,
+				D3D058E72D2324E9005843C2 /* CartViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
